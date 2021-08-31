@@ -1,0 +1,25 @@
+.nav__button {
+  border: none;
+  background-color: red;
+  border-radius: 6px;
+}
+.nav__button:first-child {
+  margin-right: 10px;
+}
+.nav__link {
+  text-decoration: none;
+  color: white;
+}
+.nav__link-active {
+  color: #000;
+}
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  width: 1200px;
+  background-color: teal;
+  display: flex;
+}
+.hello {
+  margin-left: auto;
+}
