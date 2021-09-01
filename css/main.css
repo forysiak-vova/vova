@@ -1,0 +1,132 @@
+.nav__button {
+  border: none;
+  background-color: red;
+  border-radius: 6px;
+}
+
+.navigator {
+  display: flex;
+  justify-content: center;
+}
+
+.nav__button:first-child {
+  margin-right: 10px;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav__link-active {
+  color: #000;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  width: 1200px;
+  background-color: white;
+  margin-top: 100px;
+}
+
+.hello {
+  margin-left: auto;
+  color: white;
+}
+
+.title {
+  background-color: tomato;
+}
+
+.nav {
+  width: 100%;
+  height: 100px;
+  background-color: teal;
+  border: 2px solid red;
+  position: fixed;
+  top: 0;
+}
+
+.social__link {
+  fill: red;
+  border-radius: 50%;
+}
+
+.social {
+  display: block;
+  justify-content: center;
+}
+
+.social {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.social__link:hover {
+  fill: yellow;
+  background-color: yellowgreen;
+}
+
+.our-team__item {
+  box-shadow: 0px 4px 4px rgba(207, 137, 137, 0.25);
+}
+
+.our-team__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 270px);
+  gap: 30px;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+}
+
+.trumb {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.cuberpank {
+  position: absolute;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background-color: rgba(32, 148, 243, 0.9);
+  height: 100%;
+  width: 100%;
+  padding: 77px 24px;
+  transform: translateY(100%);
+  transition: transform 500ms linear;
+}
+
+.link:hover .cuberpank {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery__name {
+  position: relative;
+  display: flex;
+  /* overflow: hidden; */
+}
+
+.gallery__about {
+  position: absolute;
+  transform: translateY(100%);
+  background-color: rgba(32, 148, 243, 0.9);
+  height: 100%;
+}
+
+.photo__link:hover .gallery__about {
+  opacity: 1;
+  transform: translate(0);
+}/*# sourceMappingURL=main.css.map */
