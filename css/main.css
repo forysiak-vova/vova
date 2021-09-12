@@ -129,4 +129,10 @@
 .photo__link:hover .gallery__about {
   opacity: 1;
   transform: translate(0);
+}
+
+.cubic {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
 }/*# sourceMappingURL=main.css.map */
