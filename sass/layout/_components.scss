@@ -110,8 +110,22 @@
   opacity: 1;
   transform: translate(0);
 }
-.cubic {
+.content__circle {
   width: 100px;
   height: 100px;
   background-color: #000;
+  position: relative;
+  left: 0;
+  font-size: 50px;
+}
+.list-nav {
+  list-style: none;
+  display: flex;
+}
+.item__nav {
+  list-style: none;
+  margin-right: 20px;
+}
+.item__nav:last-child {
+  margin-right: 0;
 }
