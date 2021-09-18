@@ -23,9 +23,26 @@
   </header>
 
   <main>
+
+   <!-- ======= розмітка модалього вікна======= -->
    <div class="wrapper">
       <div class="content">
-         <div class="content__circle">sd</div>
+         <div class="content__circle" data-modal-open></div>
+
+
+         <div class="bacdrop is-hidden" data-modal> 
+            <div class="modal">
+               <p class="about__circle"></p>
+               <ul>
+                  <li>я</li>
+                  <li>ти</li>
+                  <li>ми</li>
+                 <button type="button" class="button" data-modal-close></button>
+               </ul>
+            </div>
+         </div>
+
+
       </div>
 
    </div> 
@@ -197,6 +214,6 @@
         <div class="cubic"></div>
      </div>
   </footer>
-  
+  <script src="./js/modal.js"></script>
 </body>
 </html>
