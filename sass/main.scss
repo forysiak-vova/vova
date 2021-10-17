@@ -1,1 +1,5 @@
 @import "./layout/components";
+.counter {
+  display: flex;
+  flex-direction: row;
+}

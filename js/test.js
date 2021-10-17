@@ -820,3 +820,765 @@
 // console.log(getProductPrice("Engine"));
 
 
+
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
+//  return { category: category, priority: priority, completed: completed, ...data };
+//   // Change code above this line
+// }console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));
+// Change code below this line
+
+
+// const bookShelf = {
+
+//   books: ["The last kingdom", "The guardian of dreams"],
+//   getBooks() {
+//     return "Returning all books";
+//   },
+//   addBook(bookName) {
+//     return `Adding book ${bookName}`;
+//   },
+//   removeBook(bookName) {
+//   return `Deleting book ${bookName}`;
+//   },
+//   updateBook(oldName, newName) {
+//   return `Updating book ${oldName} to ${newName}`;
+//   },
+ 
+// };
+// console.log(bookShelf.getBooks());
+// console.log(bookShelf.addBook("Haze"));
+// console.log(bookShelf.removeBook("Red sunset"));
+// console.log(bookShelf.removeBook("Red sunset"));
+// console.log(bookShelf.updateBook("Sands of dune", "Dune"));
+
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+    
+//     let ind = this.books.indexOf(oldName);
+//     const res = this.books.splice(ind, 1, newName);
+
+
+// return res;
+//     // Change code above this line
+//   },
+// };
+// console.log(bookShelf.updateBook("Haze", "Dungeon chronicles"));
+// console.log(bookShelf.updateBook("The last kingdom", "Dune"));
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   // Change code below this line
+// getPotions(){
+//  const res = this.potions;
+  
+// return res;
+// }
+//   // Change code above this line
+// };
+// console.log(atTheOldToad.getPotions());
+
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   removePotion(potionName) {
+//     // Change code below this line
+// const res = this.potions.indexOf(potionName).pop(potionName);
+
+// return res;
+//     // Change code above this line
+//   },
+// };
+
+// ================ карточка товарів ===============================================
+
+// const cards = {
+// items: [],
+
+// getItems(){
+//   return this.items;
+// },
+// add(product){
+// this.items.push(product);
+// },
+// remove(prodactName){
+//   const { items } = this
+//   for(let i = 0; i < items.length; i += 1){
+//     const {name} = items[i];
+
+//     if(prodactName === name){
+// console.log('нашли токой продукт:', prodactName);
+// console.log(i);
+// items.splice(i, 1);
+//     };
+//   };
+//   // const ind = this.items.indexOf(prodactName);
+//   // const clean = this.items.splice(ind, 1);
+// },
+//  clear(){
+// this.items = [];
+//  },
+//  countTotalPrice(){
+//    let total = 0;
+//    for(const {price} of this.items){
+// total += price
+//    }
+//    return total;
+//  },
+// };
+
+// console.log(cards.getItems());
+
+
+// cards.add({ name: 'mango', price: 150 });
+// cards.add({ name: 'kiwi', price: 120 });
+// cards.add({ name: 'ajaks', price: 170 });
+// cards.add({ name: 'banana', price: 110 });
+
+// console.table(cards.getItems());
+
+// console.log('total: ',cards.countTotalPrice());
+
+// cards.remove('mango');
+// console.table(cards.getItems());
+
+// cards.clear();
+// console.log(cards.getItems());
+
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//    addPotion(newPotion) {
+//     for(const potion of this.potions) {
+//     if (potion.name.includes(newPotion.name)) {
+//      return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//     }
+//     }
+//      this.potions.push(newPotion);
+//   },
+//   removePotion(potionName) {
+    
+//      for(const potion of this.potions){
+//     if(potion.name === potionName){
+//     this.potions.splice(this.potions.indexOf(potion), 1)
+//     };
+//     };
+
+
+  
+//   },
+//   updatePotionName(oldName, newName) {
+   
+//     for(const potion of this.potions){
+//     if(potion.name === oldName){
+//   potion.name = newName;
+//     };
+//     };
+    
+//      },
+    
+   
+//   // Change code above this line
+// };
+// console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
+
+// const fnaA = function (massage,callback){
+//   console.log(massage);
+
+//   callback(100);
+// };
+
+// const fnaB = function (Number){
+// console.log(Number);
+// };
+// fnaA ('qwqwqw', fnaB);
+
+
+
+
+
+// const doMath = function (a, b, callBack){
+// const result = callBack(a, b);
+// console.log(result);
+// };
+// const add = function (x, y){
+//   return x + y;
+//   };
+
+// doMath (2, 3, add);
+// doMath (20, 30, function(z, d){
+//   return z - d;
+// });
+
+
+// ==============================
+
+
+// const filter = function(array, test){
+//   const res = []
+// for(const arr of array){
+//   console.log(arr);
+//  const passed = test(arr);
+
+//  if(passed){
+//    res.push(arr);
+//  };
+// };
+// return res;
+// };
+
+
+
+// const atTheOldToad = [
+  
+//   { name: "Speed potion", price: 460 },
+//   { name: "Dragon breath", price: 780 },
+//   { name: "Stone skin", price: 520 },
+  
+// ],
+
+// const resultPrice = function (atTheOldToad) {
+//   return atTheOldToad.price >= 600;
+// };
+
+//     const r3 = filter(atTheOldToad, resultPrice)
+//       console.log(r3);
+    
+
+// const fnA = function(name){
+// const innervar = 555;
+//   const fnB = function(dish){
+//     console.log(innervar);
+//     console.log(` ${name}, готовить ${dish}`);
+
+//   };
+//   return fnB;
+// };
+// const mango = fnA('mango');
+
+// console.log(mango);
+
+// mango('котлети');
+// mango('суп');
+
+// const fnA = (a,b,c) => a+b+c;
+
+//  =================================   MAP =======================
+// console.log(fnA(5,10,15));
+
+// const numbers = [5, 10, 15, 20, 25];
+// const resMap = numbers.map(number => {
+//   console.log(number);
+//   return number * 2;
+// });
+// console.log(resMap);
+
+// const players = [
+  
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+    
+//   ];
+
+//   const playerNames = players.map(player => player.name);
+//   console.log(playerNames);
+
+//   const playerPrice = players.map(player => player.price);
+//   console.log(playerPrice);
+
+//   const playerTotal = players.map(player => {
+  
+//     return {
+//       ...player,
+//       price: player.price * 2,
+//     };
+//   });
+//   console.table(playerTotal);
+
+// ==========================================   FILTER ================================
+
+// const numbers = [5,10,15,20,25];
+
+// const totalFilters = numbers.filter(number => {
+//   console.log(number);
+
+//   return number < 10 || number > 20;
+// })
+// console.log(totalFilters);
+
+// ================================== REDUCE ================================================
+
+// const numbers = [5,10,15,20,25];
+
+// const total = numbers.reduce((acc, number) => {
+//   console.log('number', number);
+//   console.log('acc', acc);
+
+//   return acc + number;
+// }, 5 );
+// console.log(total);
+
+// ================================================
+
+// const numbers = [5,10,15,20,25];
+
+// const total = numbers.reduce((acc, number) => acc + number, 0 );
+// console.log(total);
+
+// =================================================
+
+// const salary = {
+//   mango: 500,
+//   kiwi: 700, 
+//   alax: 900,
+// };
+// const salaryVal = Object.values(salary).reduce((total, el) => total + el, 0);
+
+// console.log(salaryVal);
+
+// const tweets = [
+//   { id: '000', liks: 5, tags:['thr','rhtrt']},
+//   {id: '001', liks: 5, tags:['html','css','rrrr']},
+//   {id: '002', liks: 5, tags:['js','react']},
+//   {id: '003', liks: 5, tags:['hyh','ytghgh']},
+// ];
+
+// const totalTags = tweets.reduce((acc, tweet) => {
+//   acc.push(...tweet.tags)
+
+//   return acc;
+// }, []);
+
+// console.log(totalTags);
+
+// ===================================================================
+
+// const tweets = [
+//   { id: '000', liks: 5, tags:['css','html']},
+//   {id: '001', liks: 5, tags:['react','css','react']},
+//   {id: '002', liks: 5, tags:['js','react']},
+//   {id: '003', liks: 5, tags:['css','react']},
+// ];
+
+// const totalTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
+
+// console.log(totalTags);
+
+// ========================= перебор за допомогою REDUCE ==========================
+
+
+// const total = totalTags.reduce((acc, tweet) => {
+// console.log(acc);
+//   if (acc[tweet]) {
+//     acc[tweet] += 1;
+//     return acc;
+//   }
+//   acc[tweet] = 1;
+//   return acc;
+// }, {});
+
+// ======================= SORT ===============================
+
+// const numbers = [1, 30, 3, 20, 5, 15,].sort((a, b) => a - b);
+// console.log(numbers);
+
+// ================================== MAP + FLAT ===================================
+
+// const tweets = [
+//   { id: '000', liks: 5, tags:['css','html']},
+//   {id: '001', liks: 5, tags:['react','css','react']},
+//   {id: '002', liks: 5, tags:['js','react']},
+//   {id: '003', liks: 5, tags:['css','react']},
+// ];
+
+// const tagsMap = tweets.flatMap(el => el.tags);
+// console.log(tagsMap);
+
+// ==================================== ЦЕПОЧКИ ВИЗОВОВ ======================
+
+// const nambers = [1, 8, 2, 6, 15, 5, 10];
+
+// const sortNumber = nambers
+//   .filter(number => number > 2)
+//   .map(number => number * 3)
+//   .sort((a, b) => a - b);
+// console.log(sortNumber);
+// console.log(nambers);
+// const pizzaPalace = {
+//   pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+//   order(pizzaName) {},
+// };
+// // Change code above this line
+// if(this.pizzas.includes(pizzaName)){
+//    return onSuccess(pizzaName)
+// }
+//      return onError(`There is no pizza with a name ${pizzaName} in the assortment.`)
+  
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+
+// pizzaPalace.order('Four meats', makePizza, onOrderError);
+// pizzaPalace.order('Big Mike', makePizza, onOrderError);
+// pizzaPalace.order('Vienna', makePizza, onOrderError);
+
+// ======================================================  FOREACH   ========================
+
+// const numbers = [5, 10, 8, 15, 25];
+// let total = 0;
+// numbers.forEach(function (number) {
+//   console.log(number);
+//   total += number;
+//   return total;
+// });
+
+// console.log('result', total);
+
+// ==================================================== FOREACH ==========================
+// function getCommonElements(firstArray, secondArray) {
+//   let res = [];
+//   firstArray.forEach(function (firstA) {
+//     console.log(firstA);
+//     if (secondArray.includes(firstA)) {
+//       res.push(firstA);
+//     }
+    
+//   })
+//   return res;
+// };
+
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+const users =
+  [
+    {
+      name: "Moore Hensley",
+      email: "moorehensley@indexia.com",
+      eyeColor: "blue",
+      friends: ["Sharron Pace"],
+      isActive: false,
+      balance: 2811,
+      gender: "male",
+      age: 37
+    },
+    {
+      name: "Sharlene Bush",
+      email: "sharlenebush@tubesys.com",
+      eyeColor: "blue",
+      friends: ["Briana Decker", "Sharron Pace"],
+      isActive: true,
+      balance: 3821,
+      gender: "female",
+      age: 34
+    },
+    {
+      name: "Ross Vazquez",
+      email: "rossvazquez@xinware.com",
+      eyeColor: "green",
+      friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+      isActive: false,
+      balance: 3793,
+      gender: "male",
+      age: 24
+    },
+    {
+      name: "Elma Head",
+      email: "elmahead@omatom.com",
+      eyeColor: "green",
+      friends: ["Goldie Gentry", "Aisha Tran"],
+      isActive: true,
+      balance: 2278,
+      gender: "female",
+      age: 21
+    },
+    {
+      name: "Carey Barr",
+      email: "careybarr@nurali.com",
+      eyeColor: "blue",
+      friends: ["Jordan Sampson", "Eddie Strong"],
+      isActive: true,
+      balance: 3951,
+      gender: "male",
+      age: 27
+    },
+    {
+      name: "Blackburn Dotson",
+      email: "blackburndotson@furnigeer.com",
+      eyeColor: "brown",
+      friends: ["Jacklyn Lucas", "Linda Chapman"],
+      isActive: false,
+      balance: 1498,
+      gender: "male",
+      age: 38
+    },
+    {
+      name: "Sheree Anthony",
+      email: "shereeanthony@kog.com",
+      eyeColor: "brown",
+      friends: ["Goldie Gentry", "Briana Decker"],
+      isActive: true,
+      balance: 2764,
+      gender: "female",
+      age: 39
+    }
+  ];
+
+// ============================= задача 48 в автопровірці ===================================
+
+// const getTotalBalanceByGender = (users, gender) => {
+//   return users.filter(user => user.gender === gender).reduce((acc, user) => {
+//   return (acc + user.balance);
+// }, 0);
+// };
+// console.log(getTotalBalanceByGender(users, "male"));
+
+
+// const res = users.reduce((acc, user) => {
+//   return (acc + user.balance) / users.length;
+// }, 0);
+// console.log(res);
+
+// const res = users.map(user => user.friends).sort((a, b) => b.friends.length - a.friends.length);
+// const res = users.sort((a, b) => b.friends.length - a.friends.length)
+// console.log(res);
+
+//   const sortByDescendingFriendCount = users => {
+//   return [...users].sort((firstFriend, secondFriend) => secondFriend.friends.length - firstFriend.friends.length);
+// };
+
+// console.log(users);
+
+// const getUsersWithFriend = (users, friendName) => {
+  
+//   return users.filter(user => user.friends.includes(friendName));
+  
+ 
+// };
+
+// console.log(getUsersWithFriend(users,"Briana Decker"))
+
+
+// users.filter(
+//   (course, index, array) => array.indexOf(course) === index
+// ); 
+
+// const res = users.flatMap(user => user.friends).filter(user.friend =>);
+// console.log(res);
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", c: 8.67 },
+// ];
+// // Change code below this line
+
+// const sortedByAuthorName = [...books].sort((a,b) => a.author.localeCompare(b.author));
+
+// const sortedByReversedAuthorName = [...books].sort((a,b) => b.author.localeCompare(a.author));
+
+// const sortedByAscendingRating = [...books].sort((a,b) => a.rating - (b.rating));
+
+// const sortedByDescentingRating = [...books].sort((a,b) => b.rating - (a.rating));
+
+// const counter = { 
+//   value: 0,
+//   increment() {
+//     this.value += 1;
+//   },
+//   decrement() {
+//     this.value -= 1;
+//   },
+
+// };
+
+
+// const objC = {
+//   z:5,
+// };
+// console.log('objC:', objC);
+
+// const objB = Object.create(objC);
+// objB.y = 2;
+// console.log('objB:', objB);
+
+
+// const objA = Object.create(objB);
+// objA.x = 1;
+
+// console.log('objA:', objA);
+
+// objA.z = 1000;
+// console.log('objA:', objA.z);
+
+// console.log(objA.hasOwnProperty('y'));
+// const dynniobj = Object.create({messge: 'eeeeeee'});
+//   dynniobj.message = 'erefeef',
+
+//   console.log(dynniobj.message);
+// console.log(dynniobj);
+
+// const Car = function ({ brand, model, price } = {}) {
+
+//   this.brand =  brand;
+//   this.model = model;
+//   this.price = price;
+  
+// };
+//   Car.prototype.sayHi = function () {
+//     console.log('sayHi -->',this);
+//     console.log('Hello:');
+//   };
+// console.log(Car.prototype);
+ 
+// Car.prototype.changPrice = function (newPrice) {
+//   this.price = newPrice;
+// };
+
+
+// const myCar = new Car({brand: 'Audi', model: 'Q3', price: '350000'});
+// console.log(myCar);
+
+// myCar.sayHi();
+// myCar.changPrice(1000);
+
+// const myCar2 = new Car({ brand: 'BMW', model: 'X5', price: '500000'});
+// console.log(myCar2);
+// myCar2.sayHi();
+// myCar2.changPrice(9999999);
+
+
+// const myCar3 = new Car({ brand: 'Audi', model: 'A6', price:'450000'});
+// console.log(myCar3);
+// myCar3.sayHi();
+
+// const User = function ({ email, password } = {}) {
+//   this.email = email,
+//     this.password = password
+// };
+// User.prototype.pend = function (newPassword) {
+//   this.password = newPassword
+// };
+ 
+// User.prototype.changeEmail = function (newEmail) {
+//   this.email = newEmail
+//  };
+
+// const userFn = new User({ email: 'vova@gmail.com', password: 'Forysiak' });
+
+// userFn.pend('Taras');
+// userFn.changeEmail('14071992.pedro@gmail.com');
+// console.log(userFn);
+
+// ===========================================  КЛАСИ І ПРОТОТИПИ (КОНСТРУКТОРИ) ===================================
+
+// class Car {
+
+//   static descriotion = 'Клас описующий автомобіль';
+
+//   static logInfo(carObj) {
+//     console.log('Car loginfo -->', carObj);
+//   }
+
+//   constructor({ brand, model, price } = {}) {
+//     console.log('Виконується конструктор');
+//     console.log(this);
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+  
+//   changePrice(newPrice) {
+//     this.price = newPrice
+//   }
+//   updataModal(newModal) {
+//     this.model = newModal
+//   }
+// };
+// console.dir(Car);
+
+// console.log(Car.descriotion);
+// consrcarProt = new Car({ brand: 'Audi', model: 'A6', price: '450000' });
+// Car.logInfo(consrcarProt);
+// consrcarProt.changePrice(99999);
+// consrcarProt.updataModal('Q5');
+// console.log(consrcarProt);
+
+
+
+
+
+console.log();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
