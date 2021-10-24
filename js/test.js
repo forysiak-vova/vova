@@ -1503,69 +1503,582 @@ const users =
 
 // class Car {
 
-//   static descriotion = 'Клас описующий автомобіль';
+//   static descriotion = 'Клас описующий автомобіль'; // статичне свойство
 
 //   static logInfo(carObj) {
 //     console.log('Car loginfo -->', carObj);
 //   }
 
-//   constructor({ brand, model, price } = {}) {
-//     console.log('Виконується конструктор');
-//     console.log(this);
-//     this.brand = brand;
-//     this.model = model;
-//     this.price = price;
-//   }
+  // #test = 'test'; // приватне свойство
+  // mySuperPablic = 555; // оголошення публічного свойства
+
+  // constructor({ brand, model, price } = {}) {
+  //   console.log('Виконується конструктор');
+  //   console.log(this);
+  //   this.brand = brand;
+  //   this._model = model;
+  //   this._price = price;
+
+  //   // this.mySuperPablic = 555; публічне свойство, ще один вид оголошення
+
+  //   // console.log(this.#test); // оголошення приавтного свойства
+  // }
   
-//   changePrice(newPrice) {
-//     this.price = newPrice
-//   }
-//   updataModal(newModal) {
-//     this.model = newModal
-//   }
+  // changePrice(newPrice) {
+  //   this.price = newPrice
+  // }
+  // updataModal(newModal) {
+  //   this.model = newModal
+  // }
+  // get price() {
+  //   return this._price;
+  // }
+  // set price(newPrice) {
+  //   this._price = newPrice;
+  //  }
+
+  // get model() {
+  //   return this._model;
+  // }
+  // set model(newModel) {
+  //   this._model = newModel;
+  //  }
+
 // };
+
+
 // console.dir(Car);
 
 // console.log(Car.descriotion);
+
 // consrcarProt = new Car({ brand: 'Audi', model: 'A6', price: '450000' });
+// console.log(consrcarProt);
+// consrcarProt.model = 'Q8';
+// console.log(consrcarProt.model);
+// consrcarProt.price = '4444444444444';
+// console.log(consrcarProt.price);
+// console.log(consrcarProt);
+
 // Car.logInfo(consrcarProt);
 // consrcarProt.changePrice(99999);
 // consrcarProt.updataModal('Q5');
+// console.log(consrcarProt.getModel());
+// consrcarProt.changePrice(98989898);
 // console.log(consrcarProt);
 
+// ========================================== GET SET =====================================
+
+// const obj = {
+//   _a: 5,
+//   get a() {
+//     return this._a
+//   },
+
+//   set a(x) {
+//     this._a = x;
+//   },
+// };
+
+// obj.a = 100;
+// console.log(obj);
+
+// ============================ НАСЛІДОВАННЯ =======================================
+
+// class Hero {
+//   constructor(name = 'hero', xp = 0) {
+//     this.name = name;
+//     this.xp = xp;
+//   }
+
+//   geinXp(amout) {
+//     console.log(`${this.name} получает ${amout} опита`)
+//     this.xp += amout;
+//   }
+
+// };
+
+// const mango = new Hero({ name: 'Mango', xp: 1000 });
+
+
+// class Warning extends Hero{
+//   constructor(name, xp, weapon) {
+//     super(name, xp);
+//     this.weapon = weapon;
+//   }
+//   attack() {
+//     console.log(`${this.name} атакує іспользуя ${this.weapon}`);
+//   }
+
+// };
+
+// class Bedsteck extends Warning {
+//   constructor(name, xp, majwether) {
+//     super(name, xp);
+//     this.majwether = majwether
+//   }
+
+//   lowel() {
+//     console.log(`${this.name} ----- ${this.majwether}`);
+//   }
+
+// };
+
+// const kiwi = new Bedsteck('kiwi', 700, 'miwina');
+// kiwi.lowel();
+// kiwi.geinXp(700);
+
+// class Bero extends Hero {
+//   constructor(name, xp, stepp = []) {
+//     super(name, xp);
+//     this.stepp = stepp;
+//   }
+
+//   cast() {
+//     console.log(`${this.name} щось там щось там ${this.stepp}`);
+//   }
+// };
+
+
+// const mango = new Warning('Mango', 1000, 'алебарда');
+// mango.attack();
+
+
+
+// mango.geinXp(1000);
+// console.log(mango);
+// // console.log(mango.__proto__ === Warning.prototype);
+// // console.log(Warning.prototype.__proto__);
+
+// const poly = new Bero('poly', 500, [1, 5, 10]);
+// console.log(poly);
+// poly.cast();
+// poly.geinXp(200)
+
+// ============================================== РІШЕННЯ 2 ЗАДАЧІ В АВТОПРОВІРЦІ =======================================
+
+// const customer = {
+//   username: "Mango",
+//   balance: 24000,
+//   discount: 0.1,
+//   orders: ["Burger", "Pizza", "Salad"],
+
+//    getBalance() {
+//     return this.balance;
+//   },
+//   getDiscount() {
+//     return this.discount;
+//   },
+//   setDiscount(value) {
+//     this.discount = value;
+//   },
+//   getOrders() {
+//     return this.orders;
+//   },
+//  addOrder(cost, order) {
+//     this.balance -= cost - cost * this.discount;
+//     this.orders.push(order);
+//   },
+// }
+// customer.setDiscount(0.2);
+// console.log(customer.getDiscount()); 
+// customer.addOrder(5000, "Steak")
+
+// console.log(customer.getBalance()); // 19750
+// console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
+
+// ==================================================================== 3   задача 5 модуля==============================
+// const historyService = {
+//   orders: [
+//     { email: "jacob@hotmail.com", dish: "Burrito" },
+//     { email: "solomon@topmail.net", dish: "Burger" },
+//     { email: "artemis@coldmail.net", dish: "Pizza" },
+//     { email: "solomon@topmail.net", dish: "Apple pie" },
+//     { email: "jacob@hotmail.com", dish: "Taco" },
+//   ],
+//   // Change code below this line
+//   getOrdersLog() {
+//     return this.orders
+//       .map(order => `email: ${order.email} dish: ${order.dish}`)
+//       .join(" - ");
+//   },
+//   getEmails() {
+//     const emails = this.orders.map(order => order.email);
+//     const uniqueEmails = new Set(emails);
+//     return [...uniqueEmails];
+//   },
+//   getOrdersByEmail(email) {
+//     return this.orders.filter(order => order.email === email);
+//   },
+//   // Change code above this line
+// };
+
+// console.log(historyService.getOrdersLog());
+// console.log( historyService.getEmails());
+
+// ================================================== PROTOTYPE ==========================
+
+// const animal = {
+//   legs: 4,
+// };
+// const dog = Object.create(animal);
+// dog.name = "Mango";
+
+// console.log(dog); // { name: 'Mango', __proto__: animal }
+// console.log(animal.isPrototypeOf(dog)); // true
+// console.log(animal);
+// console.log(dog.hasOwnProperty("name")); // true
+// console.log(dog.name);
+
+// ================================================================================
+
+// const parent = {
+//   name: "Stacey",
+//   surname: "Moore",
+//   age: 54,
+//   heritage: "Irish",
+// };
+
+
+// const child = Object.create(parent);
+// z: 5;
+
+// child.name = "Jason";
+// child.age = 27;
+
+
+// console.log(child.surname);
+// console.log(child.hasOwnProperty('heritage'));
+
+// =================================================================== 10 задача ======================
+
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+//   getItems() {
+//     return this.items
+//   }
+
+//   addItem(newItem) {
+//     this.items.push(newItem);
+//   }
+//   removeItem(itemToRemove) {
+//     const index = this.items.indexOf(itemToRemove)
+//     this.items.splice(index,1)
+
+//   }
+
+// };
+
+// // Change code above this line
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem("Droid");
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
 
 
 
-console.log();
+// ================================================== 12 задача модуль  5 =============================
+// class Car {
+//   // Change code below this line
+// #brand
+//   constructor({ brand, model, price }) {
+//     this.#brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+//   getBrand(){
+//   return this.#brand;
+//   }
+//   changeBrand(newBrand){
+//   this.#brand = newBrand;
+//   }
+
+//   // Change code above this line
+// }
+
+// class Car {
+//   // Change code below this line
+//   #brand;
+//   #model;
+//   #price;
+  
+//   constructor({ brand, model, price }) {
+//     this.#brand = brand;
+//     this.#model = model;
+//     this.#price = price;
+//   }
+
+//   get Brand() {
+//     return this.#brand;
+//   }
+
+//   set changeBrand(newBrand) {
+//     this.#brand = newBrand;
+//   }
+
+//   get Model() {
+//     return this.#model;
+//   }
+
+//   set updateModel(newModel) {
+//     this.#model = newModel;
+//   }
+
+//   get Price() {
+//     return this.#price;
+//   }
+
+//   set Price(newPrice) {
+//     this.#price = newPrice;
+//   }
+//   // Change code above this line
+// }
+
+// ===================================================== 17 =====================
+// class Car {
+//   // Change code below this line
+//   static MAX_PRICE = 50000;
+  
+//   #price;
+
+//   constructor({ price }) {
+//     this.#price = price;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+
+//   set price(newPrice) {
+//     if(newPrice > 'MAX_PRICE'){
+//      return
+//     } 
+    
+//    this.#price = newPrice
+//   }
+//   // Change code above this line
+// }
+
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price); // 35000
+
+// audi.price = 49000;
+// console.log(audi.price); // 49000
+
+// audi.price = 51000;
+// console.log(audi.price); // 49000
+
+// =============================================== 18 задача 5 модуля ==========================================
+
+// class Car {
+//   static #MAX_PRICE = 50000;
+//   // Change code below this line
+// static checkPrice(price){
+// if(price > 50000){
+// return("Error! Price exceeds the maximum");
+  
+// }
+//   return("Success! Price is within acceptable limits");
+  
+// }
+//   // Change code above this line
+//   constructor({ price }) {
+//     this.price = price;
+//   }
+// }
+
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
+
+// console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+// console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+
+
+// ============================================= 19 задача 5 модуля ===========================
+
+
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// class Admin extends User {
+//   // Change code below this line
+// constructor({email, accessLevel}){
+//   super(email);
+//   this. accessLevel = accessLevel;
+
+// }
+//   static AccessLevel = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+
+//   // Change code above this line
+// }
+
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   accessLevel: Admin.AccessLevel.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.accessLevel); // "superuser"
+
+
+// const navEl = document.querySelector('li');
+// console.log(navEl);
+
+// ========================================= задачі в вс коді ======================================
+
+// =============================================  ДОМ ==================================================
+
+
+// // ===================== як замінити строку в h1-h6  і всіх тегах з текстом ===================
+// const herotitleEl = document.querySelector('.hero__title');
+// console.log(herotitleEl);
+// console.log(herotitleEl.textContent);
+// herotitleEl.textContent = 'Я сладкий перажочек'
+
+// const buttonActionEl = document.querySelectorAll('.js-action button');
+// console.log(buttonActionEl[0].dataset.action);
+
+
+// ============================================ як додоти заголовок h1 з текстом в js ============================
+
+// const remoweTitle = document.createElement('h1');
+// remoweTitle.textContent = 'Це заголовок сторінки';
+// remoweTitle.classList.add('page__title');
+// document.body.appendChild(remoweTitle);
+// console.log(remoweTitle);
+
+// ============================================= домашня робота завдання 2 ==============================================
+
+// const ingredients = [
+//   'Potatoes',
+//   'Mushrooms',
+//   'Garlic',
+//   'Tomatos',
+//   'Herbs',
+//   'Condiments',
+// ];
 
 
 
+// const remoweItem = document.createElement('li');
+// remoweItem.textContent = 'Potatoes';
+// remoweItem.classList.add('item');
+
+// const remoweItem1 = document.createElement('li');
+// remoweItem1.textContent = 'Mushrooms';
+// remoweItem1.classList.add('item');
+ 
+// const remoweItem2 = document.createElement('li');
+// remoweItem2.textContent = 'Garlic';
+// remoweItem2.classList.add('item');
+
+// const remoweItem3 = document.createElement('li');
+// remoweItem3.textContent = 'Tomatos';
+// remoweItem3.classList.add('item');
+
+// const remoweItem4 = document.createElement('li');
+// remoweItem4.textContent = 'Herbs';
+// remoweItem4.classList.add('item');
+
+// const remoweItem5 = document.createElement('li');
+// remoweItem5.textContent = 'Condiments';
+// remoweItem5.classList.add('item');
+
+// const navItem = document.querySelector('ul#ingredients');
+// navItem.append(remoweItem, remoweItem1, remoweItem2, remoweItem3, remoweItem4, remoweItem5);
+
+
+//  ============================================ завдання 3 =====================================
+
+// const images = [
+// {
+// url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260',
+// alt: 'White and Black Long Fur Cat',
+// },
+// {
+// url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260',
+// alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+// },
+// {
+// url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260',
+// alt: 'Group of Horses Running',
+// },
+// ];
+
+// const imageItem = document.createElementNS('li');
+// const imageEl = document.createElement('img');
+// imageEl.src = 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260';
+// imageEl.alt = 'Group of Horses Running';
+// imageEl.width = 320;
+// imageEl.height = 180;
+//  imageItem.appendChild(imageEl);
+
+// // const imageItem2 = document.createElementNS('li');
+// const imageEl2 = document.createElement('img');
+// imageEl2.src = 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260';
+// imageEl2.alt = 'Orange and White Koi Fish Near Yellow Koi Fish';
+// imageEl2.width = 320;
+// imageEl2.height = 180;
+// //  imageItem2.appendChild(imageEl2);
+
+// // const imageItem3 = document.createElementNS('li');
+// const imageEl3 = document.createElement('img');
+// imageEl3.src = 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260';
+// imageEl3.alt = 'Orange and White Koi Fish Near Yellow Koi Fish';
+// imageEl3.width = 320;
+// imageEl3.height = 180;
+// //  imageItem3.appendChild(imageEl3);
+
+// const heroEl = document.querySelector('.gallery');
+// heroEl.append(imageItem, imageItem2, imageItem3);
+
+
+// ============================================= домашня робота завдання 1 ===================================
+
+//  const resOfItemLi = document.querySelector('ul#categories');
+// const categoriesLength = resOfItemLi.children.length;
+// console.log(`Number of categories: ${categoriesLength}`);
+
+// const resOfCategories = document.querySelectorAll('h2');
+// console.log(resOfCategories);
+
+// const res = resOfCategories.map(el => el);
+//  console.log(res)
 
 
 
+// const title = document.querySelectorAll('h2');
+// console.log(title.textContent);
 
+// console.log(resOfItemLi); 
+// console.log(resOfItemLi.children);
+// const categoriesValue = resOfItemLi.children;
+// console.log(categoriesValue);
+// const liItem = categoriesValue.children;
+// console.log(liItem);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// const liItem = document.querySelectorAll('li');
+// console.log(liItem);
 
 
 
