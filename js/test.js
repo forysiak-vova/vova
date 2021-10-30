@@ -2079,30 +2079,25 @@ const users =
 
 // const liItem = document.querySelectorAll('li');
 // console.log(liItem);
-const targetButtonClick = document.querySelector('.target-btn');
-const hendelButtonSeciutyry = document.querySelector('.btn');
-const hendelButtonBars = document.querySelector('.btn2');
+// const targetButtonClick = document.querySelector('.target-btn');
+// const hendelButtonSeciutyry = document.querySelector('.btn');
+// const hendelButtonBars = document.querySelector('.btn2');
 
-targetButtonClick.addEventListener('click', () => {
-  console.log('click');
+// targetButtonClick.addEventListener('click', () => {
+//   console.log('click');
 
-  hendelButtonSeciutyry.addEventListener('click', onTargetBtnClick);
-});
+//   hendelButtonSeciutyry.addEventListener('click', onTargetBtnClick);
+// });
 
-hendelButtonBars.addEventListener('click', () => {
-  console.log('зніми мені клік з кнопки');
+// hendelButtonBars.addEventListener('click', () => {
+//   console.log('зніми мені клік з кнопки');
 
-  hendelButtonSeciutyry.removeEventListener('click', onTargetBtnClick);
-});
+//   hendelButtonSeciutyry.removeEventListener('click', onTargetBtnClick);
+// });
 
-function onTargetBtnClick() {
-  console.log('клік по цельовій кнопці');
-}
-
-
-
-
-
+// function onTargetBtnClick() {
+//   console.log('клік по цельовій кнопці');
+// }
 
 
 
