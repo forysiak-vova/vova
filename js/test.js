@@ -2099,9 +2099,28 @@ const users =
 //   console.log('клік по цельовій кнопці');
 // }
 
+const divContainer = document.querySelector('.js-container');
+console.log(divContainer);
+divContainer.addEventListener('click', onClickButton);
 
+function onClickButton(e) {
+  // console.log();
+  if (e.target.nodeName !== 'BUTTON') {
+    return;
+  }
+  console.log(e.target.textContent);
+}
 
+const addButton = document.querySelector('.add-BTN');
 
+addButton.addEventListener('click', oncreateBtn);
+let lasOfCreate = 6;
+function oncreateBtn() {
+  const btn = document.createElement('button');
+  btn.textContent = `Кнопка ${lasOfCreate}`;
+  btn.type = 'button'
 
-
+  divContainer.appendChild(btn);
+lasOfCreate += 1;
+}
 
