@@ -195,3 +195,21 @@
   opacity: 0;
   pointer-events: none;
 }
+.tags {
+  list-style: none;
+  outline: 1px solid tomato;
+}
+.tags__button {
+  width: 50px;
+  height: 25px;
+  color: tomato;
+  background-color: chartreuse;
+}
+.tags__button-active {
+  color: #ffffff;
+  background-color: blue;
+}
+.tags__item {
+  width: 50px;
+  height: 25px;
+}

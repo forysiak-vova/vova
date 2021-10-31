@@ -2099,28 +2099,94 @@ const users =
 //   console.log('клік по цельовій кнопці');
 // }
 
-const divContainer = document.querySelector('.js-container');
-console.log(divContainer);
-divContainer.addEventListener('click', onClickButton);
+// const divContainer = document.querySelector('.js-container');
+// console.log(divContainer);
 
-function onClickButton(e) {
-  // console.log();
+// divContainer.addEventListener('click', onClickButton);
+
+// function onClickButton(e) {
+
+//   if (e.target.nodeName !== 'BUTTON') {
+//     return;
+//   }
+//   console.log(e.target.textContent);
+// }
+
+
+
+//  ===============================  скрипт для динамічного додавання кнопки ===============================================================================
+
+// const addButton = document.querySelector('.add-BTN');
+
+// addButton.addEventListener('click', oncreateBtn);
+// let lasOfCreate = 6;
+// function oncreateBtn() {
+//   const btn = document.createElement('button');
+//   btn.textContent = `Кнопка ${lasOfCreate}`;
+//   btn.type = 'button'
+
+//   divContainer.appendChild(btn);
+// lasOfCreate += 1;
+// 
+
+
+// ================================================= скрипт для динамічного зазначення і відзначення кнопки (додавання і знімання класу css)===================== 
+
+// const container = document.querySelector('.js-tags');
+// let selectedTag = null;
+
+// container.addEventListener('click', onTargetButtonClick);
+// function onTargetButtonClick(e) {
+//   if (e.target.nodeName !== 'BUTTON') {
+//     return;
+//   }
+
+//   const tagsActiveBtn = document.querySelector('.tags__button-active');
+//   const nextActiveBtn = e.target;
+//   nextActiveBtn.classList.add('tags__button-active');
+//   console.log(tagsActiveBtn);
+
+  
+//   if (tagsActiveBtn) {
+//     tagsActiveBtn.classList.remove('tags__button-active');
+//   }
+//   // tagsActiveBtn?.classList.remove('tags__button-active');
+ 
+//   selectedTag = e.target.dataset.button;
+//   console.log(selectedTag);
+
+  
+// }
+
+const container = document.querySelector('.js-tags');
+let selectedTag = new Set();
+
+container.addEventListener('click', onTargetButtonClick);
+
+function onTargetButtonClick(e) {
   if (e.target.nodeName !== 'BUTTON') {
     return;
   }
-  console.log(e.target.textContent);
-}
 
-const addButton = document.querySelector('.add-BTN');
+  // console.log(e.target);
+  const btn = e.target;
+  const tag = btn.dataset.button
+  const isActive = btn.classList.contains('tags__button-active');
+  if (isActive) {
+    selectedTag.delete(tag);
+  } else {
+    selectedTag.add(tag);
+  }
+  btn.classList.toggle('tags__button-active');
+  // selectedTag.push(e.target.dataset.button);
+  // const res = selectedTag.filter((el,index,array) => array.indexOf(el) === index);
+  // console.log(res);
+  //  selectedTag.add(e.target.dataset.button);
+ 
+  console.log(selectedTag);
+};
+  
 
-addButton.addEventListener('click', oncreateBtn);
-let lasOfCreate = 6;
-function oncreateBtn() {
-  const btn = document.createElement('button');
-  btn.textContent = `Кнопка ${lasOfCreate}`;
-  btn.type = 'button'
 
-  divContainer.appendChild(btn);
-lasOfCreate += 1;
-}
+
 
