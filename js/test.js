@@ -2158,35 +2158,68 @@ const users =
   
 // }
 
-const container = document.querySelector('.js-tags');
-let selectedTag = new Set();
+// const container = document.querySelector('.js-tags');
+// let selectedTag = new Set();
 
-container.addEventListener('click', onTargetButtonClick);
+// container.addEventListener('click', onTargetButtonClick);
 
-function onTargetButtonClick(e) {
-  if (e.target.nodeName !== 'BUTTON') {
-    return;
-  }
+// function onTargetButtonClick(e) {
+//   if (e.target.nodeName !== 'BUTTON') {
+//     return;
+//   }
 
-  // console.log(e.target);
-  const btn = e.target;
-  const tag = btn.dataset.button
-  const isActive = btn.classList.contains('tags__button-active');
-  if (isActive) {
-    selectedTag.delete(tag);
-  } else {
-    selectedTag.add(tag);
-  }
-  btn.classList.toggle('tags__button-active');
-  // selectedTag.push(e.target.dataset.button);
-  // const res = selectedTag.filter((el,index,array) => array.indexOf(el) === index);
-  // console.log(res);
-  //  selectedTag.add(e.target.dataset.button);
+//   // console.log(e.target);
+//   const btn = e.target;
+//   const tag = btn.dataset.button
+//   const isActive = btn.classList.contains('tags__button-active');
+//   if (isActive) {
+//     selectedTag.delete(tag);
+//   } else {
+//     selectedTag.add(tag);
+//   }
+//   btn.classList.toggle('tags__button-active');
+//   // selectedTag.push(e.target.dataset.button);
+//   // const res = selectedTag.filter((el,index,array) => array.indexOf(el) === index);
+//   // console.log(res);
+//   //  selectedTag.add(e.target.dataset.button);
  
-  console.log(selectedTag);
-};
+//   console.log(selectedTag);
+// };
+// ================================================================================================
   
+// const coorsOutputRef = document.querySelector('.js-trottle');
+// let mouseMoveInvocationCounter = 0;
+const items = [
+  {lable: 'js'},
+  {lable: 'css'},
+  {lable: 'html'},
+  {lable: 'react'},
+  { lable: 'notejs' },
+  {lable: 'lodash'},
+  { lable: 'SQL'},
+]
+const refs = {
+  list: document.querySelector('.js-list'),
+  input: document.querySelector('.js-input'),
+ }
+refs.input.addEventListener('input', onFilterChange);
 
 
 
+const listItemMarkup = renderOfMassyw(items);
+createEl(listItemMarkup);
+console.log(listItemMarkup);
+function renderOfMassyw(items) {
+  return items.map(item => `<li>${item.lable}</li>`).join('');
+}
 
+function onFilterChange(e) {
+  const filter = e.target.value.toLowerCase();
+  const toFilteredItems = items.filter(t => t.lable.toLowerCase().includes(filter));
+   const listItemMarkup = renderOfMassyw(toFilteredItems);
+ createEl(listItemMarkup);
+
+}
+function createEl(marcup) {
+  refs.list.innerHTML = marcup;
+}
