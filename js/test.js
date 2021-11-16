@@ -2189,37 +2189,42 @@ const users =
   
 // const coorsOutputRef = document.querySelector('.js-trottle');
 // let mouseMoveInvocationCounter = 0;
-const items = [
-  {lable: 'js'},
-  {lable: 'css'},
-  {lable: 'html'},
-  {lable: 'react'},
-  { lable: 'notejs' },
-  {lable: 'lodash'},
-  { lable: 'SQL'},
-]
-const refs = {
-  list: document.querySelector('.js-list'),
-  input: document.querySelector('.js-input'),
- }
-refs.input.addEventListener('input', onFilterChange);
+// const items = [
+//   {lable: 'js'},
+//   {lable: 'css'},
+//   {lable: 'html'},
+//   {lable: 'react'},
+//   { lable: 'notejs' },
+//   {lable: 'lodash'},
+//   { lable: 'SQL'},
+// ]
+// const refs = {
+//   list: document.querySelector('.js-list'),
+//   input: document.querySelector('.js-input'),
+//  }
+// refs.input.addEventListener('input', onFilterChange);
 
 
 
-const listItemMarkup = renderOfMassyw(items);
-createEl(listItemMarkup);
-console.log(listItemMarkup);
-function renderOfMassyw(items) {
-  return items.map(item => `<li>${item.lable}</li>`).join('');
-}
+// const listItemMarkup = renderOfMassyw(items);
+// createEl(listItemMarkup);
+// console.log(listItemMarkup);
+// function renderOfMassyw(items) {
+//   return items.map(item => `<li>${item.lable}</li>`).join('');
+// }
 
-function onFilterChange(e) {
-  const filter = e.target.value.toLowerCase();
-  const toFilteredItems = items.filter(t => t.lable.toLowerCase().includes(filter));
-   const listItemMarkup = renderOfMassyw(toFilteredItems);
- createEl(listItemMarkup);
+// function onFilterChange(e) {
+//   const filter = e.target.value.toLowerCase();
+//   const toFilteredItems = items.filter(t => t.lable.toLowerCase().includes(filter));
+//    const listItemMarkup = renderOfMassyw(toFilteredItems);
+//  createEl(listItemMarkup);
 
-}
-function createEl(marcup) {
-  refs.list.innerHTML = marcup;
-}
+// }
+// function createEl(marcup) {
+//   refs.list.innerHTML = marcup;
+// }
+
+const date = new Date();
+
+console.log(date.toLocaleTimeString());
+console.log(new Date(15000))
