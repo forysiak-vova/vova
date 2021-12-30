@@ -1,0 +1,23 @@
+{
+  "name": "vovk-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forysiak-vova/vovk-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/forysiak-vova/vovk-/issues"
+  },
+  "homepage": "https://github.com/forysiak-vova/vovk-#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}

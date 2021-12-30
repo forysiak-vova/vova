@@ -42,7 +42,7 @@
 // // функція для виведення вартості заказу ========
 
 // function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
-//   // Change code below this line 
+//   // Change code below this line
 // const message = `You ordered droids worth ${(orderedQuantity*pricePerDroid)+deliveryFee} credits. Delivery (${deliveryFee} credits) is included in total price.`;
  
 //   // Change code above this line
@@ -69,7 +69,7 @@
 // console.log(a <= b); // true
 // console.log(b <= a); // false
 
-// //  ======= код для порахування кількості елементів ======== 
+// //  ======= код для порахування кількості елементів ========
 
 // const uyi = "gaf";
 // console.log(uyi.length);
@@ -118,7 +118,7 @@
 
 // // ======= логічне і або або / якщо вписане false відразу перебиває (правда неправда) !pvsy.' d lheue cnjhjye
 
-// console.log(6 && 5 && 7); 
+// console.log(6 && 5 && 7);
 // console.log(6 || 5 || 7);
 // console.log(!true);
 
@@ -154,7 +154,7 @@
 //  console.log('x > y');
 // } else {
 //  console.log('x < y');
-// } 
+// }
 
 // const salary = 1800;
 // if(salary <= 500){
@@ -169,7 +169,7 @@
 
 // function checkStorage(available, ordered) {
 //  let message;
-//  // Change code below this line 
+//  // Change code below this line
 // if(available <= ordered){
 //  message = "Not enough goods in stock!";
 // } else {
@@ -513,7 +513,7 @@
 //   // Change code below this line
 // for(let i = 0; i <= order.length - 1; i += 1){
 //   // const ord = order[i];
-//  total += order[i]; 
+//  total += order[i];
 // }
 //   // Change code above this line
 //   return total;
@@ -531,7 +531,7 @@
 //     if (word.length > longestWord.length){
 //       longestWord = word;
 //     }
-//   }  
+//   }
   
 
 // return longestWord;
@@ -670,7 +670,7 @@
 //   for (let i = start; i < end, i += 1;){
 //  console.log(i);
 // if(i % 2 === 0){
-// } 
+// }
 // total.push(i);
 
   
@@ -809,7 +809,7 @@
 // // return product.price;
 // // } else {
 // // return null;
-// // };  
+// // };
 // };
 //  // Change code above this line
 // }
@@ -1141,7 +1141,7 @@
 
 // const salary = {
 //   mango: 500,
-//   kiwi: 700, 
+//   kiwi: 700,
 //   alax: 900,
 // };
 // const salaryVal = Object.values(salary).reduce((total, el) => total + el, 0);
@@ -1266,79 +1266,82 @@
 // };
 
 // console.log(getCommonElements([1, 2, 3], [2, 4]));
-const users =
-  [
-    {
-      name: "Moore Hensley",
-      email: "moorehensley@indexia.com",
-      eyeColor: "blue",
-      friends: ["Sharron Pace"],
-      isActive: false,
-      balance: 2811,
-      gender: "male",
-      age: 37
-    },
-    {
-      name: "Sharlene Bush",
-      email: "sharlenebush@tubesys.com",
-      eyeColor: "blue",
-      friends: ["Briana Decker", "Sharron Pace"],
-      isActive: true,
-      balance: 3821,
-      gender: "female",
-      age: 34
-    },
-    {
-      name: "Ross Vazquez",
-      email: "rossvazquez@xinware.com",
-      eyeColor: "green",
-      friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-      isActive: false,
-      balance: 3793,
-      gender: "male",
-      age: 24
-    },
-    {
-      name: "Elma Head",
-      email: "elmahead@omatom.com",
-      eyeColor: "green",
-      friends: ["Goldie Gentry", "Aisha Tran"],
-      isActive: true,
-      balance: 2278,
-      gender: "female",
-      age: 21
-    },
-    {
-      name: "Carey Barr",
-      email: "careybarr@nurali.com",
-      eyeColor: "blue",
-      friends: ["Jordan Sampson", "Eddie Strong"],
-      isActive: true,
-      balance: 3951,
-      gender: "male",
-      age: 27
-    },
-    {
-      name: "Blackburn Dotson",
-      email: "blackburndotson@furnigeer.com",
-      eyeColor: "brown",
-      friends: ["Jacklyn Lucas", "Linda Chapman"],
-      isActive: false,
-      balance: 1498,
-      gender: "male",
-      age: 38
-    },
-    {
-      name: "Sheree Anthony",
-      email: "shereeanthony@kog.com",
-      eyeColor: "brown",
-      friends: ["Goldie Gentry", "Briana Decker"],
-      isActive: true,
-      balance: 2764,
-      gender: "female",
-      age: 39
-    }
-  ];
+
+
+//  ========================================================================== ТЕСТ ОБЄКТ =================================
+// const users =
+//   [
+//     {
+//       name: "Moore Hensley",
+//       email: "moorehensley@indexia.com",
+//       eyeColor: "blue",
+//       friends: ["Sharron Pace"],
+//       isActive: false,
+//       balance: 2811,
+//       gender: "male",
+//       age: 37
+//     },
+//     {
+//       name: "Sharlene Bush",
+//       email: "sharlenebush@tubesys.com",
+//       eyeColor: "blue",
+//       friends: ["Briana Decker", "Sharron Pace"],
+//       isActive: true,
+//       balance: 3821,
+//       gender: "female",
+//       age: 34
+//     },
+//     {
+//       name: "Ross Vazquez",
+//       email: "rossvazquez@xinware.com",
+//       eyeColor: "green",
+//       friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//       isActive: false,
+//       balance: 3793,
+//       gender: "male",
+//       age: 24
+//     },
+//     {
+//       name: "Elma Head",
+//       email: "elmahead@omatom.com",
+//       eyeColor: "green",
+//       friends: ["Goldie Gentry", "Aisha Tran"],
+//       isActive: true,
+//       balance: 2278,
+//       gender: "female",
+//       age: 21
+//     },
+//     {
+//       name: "Carey Barr",
+//       email: "careybarr@nurali.com",
+//       eyeColor: "blue",
+//       friends: ["Jordan Sampson", "Eddie Strong"],
+//       isActive: true,
+//       balance: 3951,
+//       gender: "male",
+//       age: 27
+//     },
+//     {
+//       name: "Blackburn Dotson",
+//       email: "blackburndotson@furnigeer.com",
+//       eyeColor: "brown",
+//       friends: ["Jacklyn Lucas", "Linda Chapman"],
+//       isActive: false,
+//       balance: 1498,
+//       gender: "male",
+//       age: 38
+//     },
+//     {
+//       name: "Sheree Anthony",
+//       email: "shereeanthony@kog.com",
+//       eyeColor: "brown",
+//       friends: ["Goldie Gentry", "Briana Decker"],
+//       isActive: true,
+//       balance: 2764,
+//       gender: "female",
+//       age: 39
+//     }
+//   ];
 
 // ============================= задача 48 в автопровірці ===================================
 
@@ -1377,7 +1380,7 @@ const users =
 
 // users.filter(
 //   (course, index, array) => array.indexOf(course) === index
-// ); 
+// );
 
 // const res = users.flatMap(user => user.friends).filter(user.friend =>);
 // console.log(res);
@@ -1410,7 +1413,7 @@ const users =
 
 // const sortedByDescentingRating = [...books].sort((a,b) => b.rating - (a.rating));
 
-// const counter = { 
+// const counter = {
 //   value: 0,
 //   increment() {
 //     this.value += 1;
@@ -1680,7 +1683,7 @@ const users =
 //   },
 // }
 // customer.setDiscount(0.2);
-// console.log(customer.getDiscount()); 
+// console.log(customer.getDiscount());
 // customer.addOrder(5000, "Steak")
 
 // console.log(customer.getBalance()); // 19750
@@ -1856,7 +1859,7 @@ const users =
 //   set price(newPrice) {
 //     if(newPrice > 'MAX_PRICE'){
 //      return
-//     } 
+//     }
     
 //    this.#price = newPrice
 //   }
@@ -2070,7 +2073,7 @@ const users =
 // const title = document.querySelectorAll('h2');
 // console.log(title.textContent);
 
-// console.log(resOfItemLi); 
+// console.log(resOfItemLi);
 // console.log(resOfItemLi.children);
 // const categoriesValue = resOfItemLi.children;
 // console.log(categoriesValue);
@@ -2127,10 +2130,10 @@ const users =
 
 //   divContainer.appendChild(btn);
 // lasOfCreate += 1;
-// 
+//
 
 
-// ================================================= скрипт для динамічного зазначення і відзначення кнопки (додавання і знімання класу css)===================== 
+// ================================================= скрипт для динамічного зазначення і відзначення кнопки (додавання і знімання класу css)=====================
 
 // const container = document.querySelector('.js-tags');
 // let selectedTag = null;
@@ -2224,7 +2227,9 @@ const users =
 //   refs.list.innerHTML = marcup;
 // }
 
-const date = new Date();
+// const date = new Date();
 
-console.log(date.toLocaleTimeString());
-console.log(new Date(15000))
+// console.log(date.toLocaleTimeString());
+// console.log(new Date(15000))
+let os = require('os');
+console.log(os.userInfo());
